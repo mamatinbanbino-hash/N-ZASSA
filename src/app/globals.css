@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --obsidian: #09090b;
+  --gold: #eab308;
+}
+
+body {
+  background: var(--obsidian);
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: contain; /* Empêche le rebond du scroll sur iPhone */
+}
+
+/* Cache la barre de défilement pour le feed TikTok */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Effet de verre (Glassmorphism) */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Animation du disque qui tourne (Musique) */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
