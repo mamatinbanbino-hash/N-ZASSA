@@ -1,8 +1,3 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
-
 export const metadata = {
   title: "N'ZASSA",
   description: 'Le réseau de Macassi',
@@ -15,7 +10,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className={inter.className}>{children}</body>
+      <body style={{ margin: 0, backgroundColor: 'black', color: 'white', fontFamily: 'sans-serif' }}>
+        {children}
+      </body>
     </html>
   )
 }
